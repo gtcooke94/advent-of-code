@@ -10,7 +10,8 @@ nums_str = inp.readlines()[0].strip('\n')
 nums = [int(s) for s in nums_str.split(",")]
 start_nums = copy.deepcopy(nums)
 
-global i
+global instr_ptr
+instr_ptr = 0
 
 def add(x, y, pos):
     nums[pos] = x + y
@@ -29,16 +30,16 @@ def output_(x):
     return True
 
 def jump_true(true, value):
-    global i
+    global instr_ptr
     if true:
-        i = value
+        instr_ptr= value
         return False
     return True
 
 def jump_false(true, value):
-    global i
+    global instr_ptr
     if not true:
-        i = value
+        instr_ptr= value
         return False
     return True
 
@@ -109,12 +110,12 @@ def split_instr(instr):
 i = 0
 while True:
     #  print(nums)
-    instr = nums[i]
+    instr = nums[instr_ptr]
     instr, modes = split_instr(instr)
     if instr == 99:
         break
     l = instruction_lengths[instr]
-    params = nums[i+1:i+l+1]
+    params = nums[instr_ptr+1:instr_ptr+l+1]
     func_inputs = []
     #  import pdb; pdb.set_trace()
     for j, (p, m) in enumerate(zip(params, modes)):
@@ -133,7 +134,7 @@ while True:
     #  print(instr, func_inputs)
     change_ptr = instructions[instr](*func_inputs)
     if change_ptr:
-        i += l + 1
+        instr_ptr += l + 1
 
 #  print(nums)
 
@@ -145,7 +146,7 @@ while True:
 #          nums = copy.deepcopy(start_nums)
 #          nums[1] = idx1
 #          nums[2] = idx2
-#          i = 0
+#          instr_ptr= 0
 #          while True:
 #              instr = nums[i]
 #              if instr == 99:
@@ -156,7 +157,7 @@ while True:
 #                  nums[nums[i + 3]] = num1 + num2
 #              elif instr == 2:
 #                  nums[nums[i + 3]] = num1 * num2
-#              i += 4
+#              instr_ptr+= 4
 #          if nums[0] == 19690720:
 #              print(100 * idx1 + idx2)
 #              sys.exit()
