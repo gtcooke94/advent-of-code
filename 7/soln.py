@@ -3,49 +3,52 @@ import copy
 from itertools import permutations
 from operator import itemgetter
 from collections import deque
+from itertools import cycle
 
 #  inp = sys.stdin
-inp = open("input.txt")
+inp = open("5in.txt")
 
 nums_str = inp.readlines()[0].strip('\n')
 
 nums = [int(s) for s in nums_str.split(",")]
 start_nums = copy.deepcopy(nums)
 
-def add(x, y, pos):
+def add(x, y, pos, nums):
     nums[pos] = x + y
     return False, None
 
-def mult(x, y, pos):
+def mult(x, y, pos, nums):
     nums[pos] = x * y
     return False, None
 
-def input_(pos, val):
+def input_(pos, val, nums):
     nums[pos] = val
     return False, None
 
-def output_(x):
+def output_(x, nums):
+    #  if x == 3856051:
+        #  import pdb; pdb.set_trace()
     print("OUTPUT: {}".format(x))
     return False, x
 
-def jump_true(true, value):
+def jump_true(true, value, nums):
     if true:
         return True, value
     return False, None
 
-def jump_false(true, value):
+def jump_false(true, value, nums):
     if not true:
         return True, value
     return False, None
 
-def lt(a, b, pos):
+def lt(a, b, pos, nums):
     if a < b:
         nums[pos] = 1
     else:
         nums[pos] = 0
     return False, None
 
-def eq(a, b, pos):
+def eq(a, b, pos, nums):
     if a == b:
         nums[pos] = 1
     else:
@@ -96,15 +99,23 @@ def split_instr(instr):
     return instr, modes
 
        
+def init_intcode(nums, inputs):
+    return run_intcode(nums, inputs, 0)
 
-def run_intcode(nums, inputs):
-    i = 0
+def run_intcode(nums, inputs, i):
     to_return = 0
+    is_done = False
+    is_waiting_for_input = False
+    my_output = None
     while True:
         #  print(nums)
         instr = nums[i]
         instr, modes = split_instr(instr)
+        #  print(instr)
+        #  import pdb; pdb.set_trace()
         if instr == 99:
+            is_done = True
+            io.append(my_output)
             break
         l = instruction_lengths[instr]
         params = nums[i+1:i+l+1]
@@ -123,44 +134,84 @@ def run_intcode(nums, inputs):
             elif m == 1:
                 func_inputs.append(p)
         if instr == 3:
-            func_inputs.append(next(inputs))
+            try:
+                func_inputs.append(next(inputs))
+            except StopIteration:
+                try:
+                    func_inputs.append(io.popleft())
+                except IndexError:
+                    io.append(my_output)
+                    is_waiting_for_input = True
+                    break
         #  print(instr, func_inputs)
-        change_ptr, change_to = instructions[instr](*func_inputs)
-        if instr == 4:
-            to_return = change_to
+        func_inputs.append(nums)
+        change_ptr, instr_out = instructions[instr](*func_inputs)
         if change_ptr:
-            i = change_to
+            i = instr_out
         else:
             i += l + 1
-    return to_return
+        if instr == 4:
+            #  to_return = instr_out
+            my_output = instr_out
+            #  io.append(instr_out)
+    return to_return, i, is_waiting_for_input, is_done
 
 
 #  run_intcode(nums, iter((5,)))
-perms = permutations(range(0, 5))
-phases_to_val = {}
-for phases in perms:
-    prev_out = 0
-    for phase in phases:
-        nums = copy.deepcopy(start_nums)
-        prev_out = run_intcode(nums, iter((phase, prev_out)))
-    phases_to_val[phases] = prev_out
-
-print(max(phases_to_val.items(), key=itemgetter(1)))
+#  perms = permutations(range(0, 5))
+#  phases_to_val = {}
+#  for phases in perms:
+#      prev_out = 0
+#      for phase in phases:
+#          nums = copy.deepcopy(start_nums)
+#          prev_out = run_intcode(nums, iter((phase, prev_out)))
+#      phases_to_val[phases] = prev_out
+#
+#  print(max(phases_to_val.items(), key=itemgetter(1)))
 
     
 #================================================================================
 
+perms = permutations(range(5, 10))
+phases_to_val = {}
+
+
+def handle_pause(cur_iter, to_return, instr_ptr, is_waiting_for_input, is_done):
+    pointers[cur_iter] = instr_ptr
+    all_done[cur_iter] = is_done
+    return is_done, all(all_done)
 
 
 
+phases_to_val = {}
+for phases in perms:
+    memories = [
+        copy.deepcopy(start_nums),
+        copy.deepcopy(start_nums),
+        copy.deepcopy(start_nums),
+        copy.deepcopy(start_nums),
+        copy.deepcopy(start_nums),
+    ]
 
+    pointers = [0] * 5
+    all_done = [False] * 5
+    io = deque()
+    io.append(0)
+    phases = list(phases)
+    done = False
+    for cur_iter in range(5):
+        #  import pdb; pdb.set_trace()
+        this_done, full_done = handle_pause(cur_iter, *init_intcode(memories[cur_iter], iter((phases[cur_iter],))))
+        
+    if not full_done:
+        for cur_iter in cycle(range(5)):
+            #  import pdb; pdb.set_trace()
+            this_done, full_done = handle_pause(cur_iter, *run_intcode(memories[cur_iter], iter(()), pointers[cur_iter]))
+            if full_done:
+                break
+    assert len(io) == 1
+    val = io.popleft()
+    print(val)
+    phases_to_val[tuple(phases)] = val
 
-
-
-
-
-
-
-
-
-
+print(max(phases_to_val.items(), key=itemgetter(1)))
