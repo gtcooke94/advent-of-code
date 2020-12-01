@@ -13,9 +13,9 @@ def soln_a(data):
     #              return item * other
     numbers = set(data)
     for number in numbers:
-        if 2020 - number in numbers:
-            return number * (2020 - number)
-
+        needed = 2020 - number
+        if needed in numbers:
+            return number * needed
 
 
 def soln_b(data):
@@ -23,12 +23,12 @@ def soln_b(data):
     number_pairs = set()
     numbers = set(data)
     for i, num1 in enumerate(data):
-        for num2 in data[i+1:]:
+        for num2 in data[i + 1:]:
             number_pairs.add((num1, num2))
     for p1, p2 in number_pairs:
-        if 2020 - (p1 + p2) in numbers:
-            return p1 * p2 * (2020 - (p1 + p2))
-
+        needed = 2020 - (p1 + p2)
+        if needed in numbers:
+            return p1 * p2 * needed
 
 
 def parse(data):
