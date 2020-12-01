@@ -1,0 +1,398 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/8f20f8c/
+<Leader>bg	.vimrc	/^map <Leader>bg :call Swapbg()<CR>$/;"	m
+<leader>]	.vimrc	/^nnoremap <leader>] <C-w><C-]><C-w>T$/;"	m
+<leader>a	.vimrc	/^nnoremap <leader>a :q<CR>$/;"	m
+<leader>b	.vimrc	/^nnoremap <leader>b :GoBuild<cr>$/;"	m
+<leader>c	.vimrc	/^nmap <leader>c <plug>NERDCommenterToggle$/;"	m
+<leader>c	.vimrc	/^vmap <leader>c <plug>NERDCommenterToggle$/;"	m
+<leader>f	.vimrc	/^nnoremap <leader>f zc$/;"	m
+<leader>o	.vimrc	/^nnoremap <leader>o zo $/;"	m
+<leader>r	.vimrc	/^nnoremap <leader>r :GoRun<cr>$/;"	m
+<leader>s	.vimrc	/^nnoremap  <leader>s :w<CR>$/;"	m
+<localleader>f	.vimrc	/^nnoremap <localleader>f :CtrlP getcwd()<cr>$/;"	m
+<localleader>l	.vimrc	/^nnoremap <localleader>l :ALELint<cr>$/;"	m
+<localleader>w	.vimrc	/^nnoremap <localleader>w :vsplit<CR>$/;"	m
+J	.vimrc	/^nnoremap J <C-f>$/;"	m
+K	.vimrc	/^nnoremap K <C-b>$/;"	m
+Setbg	.vimrc	/^function Setbg(color)$/;"	f
+Swapbg	.vimrc	/^function Swapbg()$/;"	f
+a	1/soln.py	/^a = sys.stdin$/;"	v
+a	2/soln.py	/^a = sys.stdin$/;"	v
+a	3/soln.py	/^a = sys.stdin$/;"	v
+abs	3/main.go	/^func abs(a int) int {$/;"	f	package:main	typeref:typename:int
+add	5/soln.py	/^def add(x, y, pos):$/;"	f
+add	5/soln2.py	/^def add(x, y, pos):$/;"	f
+add	7/soln.py	/^def add(x, y, pos, nums):$/;"	f
+add	9/soln.py	/^def add(x, y, pos):$/;"	f
+add	broken_vim.py	/^def add(x, y, pos):$/;"	f
+add	not_broken.py	/^def add(x, y, pos):$/;"	f
+add	test.py	/^def add(x, y, pos):$/;"	f
+add_as_center	6/soln.py	/^def add_as_center(o):$/;"	f
+all_done	7/soln.py	/^    all_done = [False] * 5$/;"	v
+all_orbits	6/soln.py	/^all_orbits = set()$/;"	v
+angle	10/soln.py	/^    angle = calc_angle(r, c)$/;"	v
+angles_asteroids	10/soln.py	/^angles_asteroids = defaultdict(deque)$/;"	v
+asteroids	10/soln.py	/^asteroids = {}$/;"	v
+bfs	6/soln.py	/^def bfs(root, target):$/;"	f
+calc_angle	10/soln.py	/^def calc_angle(row, col):$/;"	f
+center	10/soln.py	/^center = (11, 19)$/;"	v
+center_col	10/soln.py	/^center_row, center_col = center$/;"	v
+center_row	10/soln.py	/^center_row, center_col = center$/;"	v
+change_base	9/soln.py	/^def change_base(value):$/;"	f
+change_ptr	5/soln.py	/^    change_ptr = instructions[instr](*func_inputs)$/;"	v
+change_ptr	5/soln2.py	/^    change_ptr = instructions[instr](*func_inputs)$/;"	v
+change_ptr	9/soln.py	/^    change_ptr = instructions[instr](*func_inputs)$/;"	v
+change_ptr	broken_vim.py	/^    change_ptr = instructions[instr](*func_inputs)$/;"	v
+change_ptr	not_broken.py	/^    change_ptr = instructions[instr](*func_inputs)$/;"	v
+change_ptr	test.py	/^    change_ptr = instructions[instr](*func_inputs)$/;"	v
+change_ptr	test_base.py	/^    change_ptr = instructions[instr](*func_inputs)$/;"	v
+check_los	10/soln.py	/^def check_los(row, col, r, c):$/;"	f
+checksum	6/soln.py	/^checksum = 0$/;"	v
+cols	10/soln.py	/^cols = len(lines[0])$/;"	v
+counter	10/soln.py	/^counter = 0$/;"	v
+counter	3/soln.py	/^    x1, x2, counter = draw2(direction, dis, x1, x2, 1, counter)$/;"	v
+counter	3/soln.py	/^    x1, x2, counter = draw2(direction, dis, x1, x2, 2, counter)$/;"	v
+counter	3/soln.py	/^counter = 0 $/;"	v
+counter	3/soln.py	/^counter = 0$/;"	v
+counter	4/soln.py	/^counter = 0$/;"	v
+counter1	4/soln.py	/^counter1 = 0$/;"	v
+counter2	4/soln.py	/^counter2 = 0$/;"	v
+curmin	3/soln.py	/^        curmin = dist$/;"	v
+curmin	3/soln.py	/^curmin = np.inf$/;"	v
+current	1/soln.py	/^            current = 0$/;"	v
+current	1/soln.py	/^        current = (current \/\/ 3) - 2$/;"	v
+current	1/soln.py	/^    current = num$/;"	v
+d	4/soln.py	/^        d = differences[i]$/;"	v
+differences	4/soln.py	/^    differences = digits[1:] - digits[:-1]$/;"	v
+digits	4/soln.py	/^    digits = [int(i) for i in num]$/;"	v
+digits	4/soln.py	/^    digits = np.array(digits)$/;"	v
+digits	8/soln.py	/^digits = [int(i) for i in str(line)]$/;"	v
+digits	8/soln.py	/^digits = np.array(digits)$/;"	v
+direct	6/soln.py	/^    direct = [list(a.keys())[0] for a in orbits_list]$/;"	v
+directions	3/main.go	/^var directions = map[byte]complex64{$/;"	v	package:main
+dist	3/soln.py	/^    dist = traveledG1 + traveledG2$/;"	v
+distgrid1	3/soln.py	/^distgrid1 = np.zeros((gridsize, gridsize))$/;"	v
+distgrid2	3/soln.py	/^distgrid2= np.zeros((gridsize, gridsize))$/;"	v
+divd	1/soln.py	/^divd = [num \/\/ 3 for num in nums]$/;"	v
+done	7/soln.py	/^    done = False$/;"	v
+double_counter	4/soln.py	/^        double_counter = 0$/;"	v
+double_flag	4/soln.py	/^            double_flag = differences[i + 1] != 0$/;"	v
+double_flag	4/soln.py	/^            double_flag = differences[i - 1] != 0$/;"	v
+double_flag	4/soln.py	/^    double_flag = False$/;"	v
+draw	3/soln.py	/^def draw(direction, dis, x1, x2, marker):$/;"	f
+draw2	3/soln.py	/^def draw2(direction, dis, x1, x2, marker, counter):$/;"	f
+end	5/soln.py	/^def end():$/;"	f
+end	5/soln2.py	/^def end():$/;"	f
+end	7/soln.py	/^def end():$/;"	f
+end	9/soln.py	/^def end():$/;"	f
+end	broken_vim.py	/^def end():$/;"	f
+end	not_broken.py	/^def end():$/;"	f
+end	test.py	/^def end():$/;"	f
+eq	5/soln.py	/^def eq(a, b, pos):$/;"	f
+eq	7/soln.py	/^def eq(a, b, pos, nums):$/;"	f
+eq	9/soln.py	/^def eq(a, b, pos):$/;"	f
+eq	broken_vim.py	/^def eq(a, b, pos):$/;"	f
+eq	not_broken.py	/^def eq(a, b, pos):$/;"	f
+eq	test.py	/^def eq(a, b, pos):$/;"	f
+f	6/soln.py	/^    to, f = connection$/;"	v
+f	6/soln.py	/^    to, f = line.strip("\\n").split(")")$/;"	v
+final_image	8/soln.py	/^final_image = np.zeros((height, width))$/;"	v
+flag	4/soln.py	/^                        flag = True$/;"	v
+flag	4/soln.py	/^                    flag = True$/;"	v
+flag	4/soln.py	/^    flag = False$/;"	v
+flatlist	6/soln.py	/^flatlist = defaultdict(list)$/;"	v
+fuel	1/soln.py	/^fuel = 0$/;"	v
+full_done	7/soln.py	/^            this_done, full_done = handle_pause(cur_iter, *run_intcode(memories[cur_iter], iter(/;"	v
+full_done	7/soln.py	/^        this_done, full_done = handle_pause(cur_iter, *init_intcode(memories[cur_iter], iter((ph/;"	v
+func_inputs	5/soln.py	/^    func_inputs = []$/;"	v
+func_inputs	5/soln2.py	/^    func_inputs = []$/;"	v
+func_inputs	9/soln.py	/^    func_inputs = []$/;"	v
+func_inputs	broken_vim.py	/^    func_inputs = []$/;"	v
+func_inputs	not_broken.py	/^    func_inputs = []$/;"	v
+func_inputs	test.py	/^    func_inputs = []$/;"	v
+func_inputs	test_base.py	/^    func_inputs = []$/;"	v
+g:NERDAltDelims_java	.vimrc	/^let g:NERDAltDelims_java = 1$/;"	v
+g:NERDCommentEmptyLines	.vimrc	/^let g:NERDCommentEmptyLines = 1$/;"	v
+g:NERDCompactSexyComs	.vimrc	/^let g:NERDCompactSexyComs = 1$/;"	v
+g:NERDCreateDefaultMappings	.vimrc	/^let g:NERDCreateDefaultMappings = 0$/;"	v
+g:NERDCustomDelimiters	.vimrc	/^let g:NERDCustomDelimiters = { 'c': { 'left': '\/**','right': '*\/' } }$/;"	v
+g:NERDDefaultAlign	.vimrc	/^let g:NERDDefaultAlign = 'left'$/;"	v
+g:NERDSpaceDelims	.vimrc	/^let g:NERDSpaceDelims = 1$/;"	v
+g:NERDToggleCheckAllLines	.vimrc	/^let g:NERDToggleCheckAllLines = 1$/;"	v
+g:NERDTrimTrailingWhitespace	.vimrc	/^let g:NERDTrimTrailingWhitespace = 1$/;"	v
+g:airline#externsions#tabline#enabled	.vimrc	/^let g:airline#externsions#tabline#enabled = 1$/;"	v
+g:airline#externsions#tmuxline#enabled	.vimrc	/^let g:airline#externsions#tmuxline#enabled = 0$/;"	v
+g:airline_left_alt_sep	.vimrc	/^let g:airline_left_alt_sep = ''$/;"	v
+g:airline_left_sep	.vimrc	/^let g:airline_left_sep = '»'$/;"	v
+g:airline_left_sep	.vimrc	/^let g:airline_left_sep = '▶'$/;"	v
+g:airline_left_sep	.vimrc	/^let g:airline_left_sep = ''$/;"	v
+g:airline_powerline_font	.vimrc	/^let g:airline_powerline_font = 1$/;"	v
+g:airline_right_alt_sep	.vimrc	/^let g:airline_right_alt_sep = ''$/;"	v
+g:airline_right_sep	.vimrc	/^let g:airline_right_sep = '«'$/;"	v
+g:airline_right_sep	.vimrc	/^let g:airline_right_sep = '◀'$/;"	v
+g:airline_right_sep	.vimrc	/^let g:airline_right_sep = ''$/;"	v
+g:airline_solarized_bg	.vimrc	/^    let g:airline_solarized_bg = ( &background == "dark"? "light": "dark" )$/;"	v
+g:airline_solarized_bg	.vimrc	/^    let g:airline_solarized_bg = a:color$/;"	v
+g:airline_solarized_bg	.vimrc	/^let g:airline_solarized_bg='dark'$/;"	v
+g:airline_symbols	.vimrc	/^    let g:airline_symbols = {}$/;"	v
+g:airline_symbols	.vimrc	/^let g:airline_symbols.branch = '⎇'$/;"	v
+g:airline_symbols	.vimrc	/^let g:airline_symbols.branch = ''$/;"	v
+g:airline_symbols	.vimrc	/^let g:airline_symbols.linenr = '¶'$/;"	v
+g:airline_symbols	.vimrc	/^let g:airline_symbols.linenr = '␊'$/;"	v
+g:airline_symbols	.vimrc	/^let g:airline_symbols.linenr = '␤'$/;"	v
+g:airline_symbols	.vimrc	/^let g:airline_symbols.linenr = ''$/;"	v
+g:airline_symbols	.vimrc	/^let g:airline_symbols.paste = 'Þ'$/;"	v
+g:airline_symbols	.vimrc	/^let g:airline_symbols.paste = 'ρ'$/;"	v
+g:airline_symbols	.vimrc	/^let g:airline_symbols.paste = '∥'$/;"	v
+g:airline_symbols	.vimrc	/^let g:airline_symbols.readonly = ''$/;"	v
+g:airline_symbols	.vimrc	/^let g:airline_symbols.whitespace = 'Ξ'$/;"	v
+g:airline_theme	.vimrc	/^let g:airline_theme='solarized'$/;"	v
+g:ale_echo_msg_format	.vimrc	/^let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'$/;"	v
+g:ale_linters	.vimrc	/^let g:ale_linters = {'python': ['pyflakes', 'pylint', 'flake8']}$/;"	v
+g:ctrlp_custom_ignore	.vimrc	/^let g:ctrlp_custom_ignore = {$/;"	v
+g:ctrlp_show_hidden	.vimrc	/^let g:ctrlp_show_hidden = 1$/;"	v
+g:ctrlp_working_path_mode	.vimrc	/^let g:ctrlp_working_path_mode='w'$/;"	v
+g:deoplete#enable_at_startup	.vimrc	/^let g:deoplete#enable_at_startup = 1$/;"	v
+g:lt_location_list_toggle_map	.vimrc	/^let g:lt_location_list_toggle_map = '<leader>l'$/;"	v
+g:lt_quickfix_list_toggle_map	.vimrc	/^let g:lt_quickfix_list_toggle_map = '<leader>q'$/;"	v
+g:python3_host_prog	.vimrc	/^let g:python3_host_prog = '\/Users\/gcooke\/.virtualenvs\/neovim\/bin\/python3'$/;"	v
+g:python_host_prog	.vimrc	/^let g:python_host_prog = '\/Users\/gcooke\/.virtualenvs\/neovim2\/bin\/python2'$/;"	v
+getLines	3/main.go	/^func getLines() []string {$/;"	f	package:main	typeref:typename:[]string
+get_line	10/soln.py	/^def get_line(base_r, base_c, r, c):$/;"	f
+grid	3/soln.py	/^grid = grid1 + grid2$/;"	v
+grid1	3/soln.py	/^grid1 = np.zeros((gridsize, gridsize))$/;"	v
+grid2	3/soln.py	/^grid2= np.zeros((gridsize, gridsize))$/;"	v
+gridOne	3/main.go	/^var gridOne = &map[complex64]int{complex(0, 0): 0}$/;"	v	package:main
+gridTwo	3/main.go	/^var gridTwo = &map[complex64]int{complex(0, 0): 0}$/;"	v	package:main
+gridsize	3/soln.py	/^gridsize = 50000 $/;"	v
+handle_pause	7/soln.py	/^def handle_pause(cur_iter, to_return, instr_ptr, is_waiting_for_input, is_done):$/;"	f
+height	8/soln.py	/^height = 6$/;"	v
+horizontal_check	10/soln.py	/^def horizontal_check(row, col, r, c):$/;"	f
+i	2/soln.py	/^        i = 0$/;"	v
+i	2/soln.py	/^i = 0$/;"	v
+i	4/soln.py	/^    i = 0$/;"	v
+i	5/soln.py	/^i = 0$/;"	v
+i	5/soln2.py	/^i = 0$/;"	v
+i	9/soln.py	/^i = 0$/;"	v
+i	broken_vim.py	/^i = 0$/;"	v
+i	not_broken.py	/^i = 0$/;"	v
+i	test.py	/^i = 0$/;"	v
+image	8/soln.py	/^image = digits.reshape(layers, height, width)$/;"	v
+init_intcode	7/soln.py	/^def init_intcode(nums, inputs):$/;"	f
+inp	10/soln.py	/^inp = open("input.txt")$/;"	v
+inp	5/soln.py	/^inp = open("input.txt")$/;"	v
+inp	5/soln2.py	/^inp = open("input.txt")$/;"	v
+inp	6/soln.py	/^inp = open("input.txt")$/;"	v
+inp	7/soln.py	/^inp = open("5in.txt")$/;"	v
+inp	8/soln.py	/^inp = open("input.txt")$/;"	v
+inp	9/soln.py	/^inp = open("input.txt")$/;"	v
+inp	broken_vim.py	/^inp = open("input.txt")$/;"	v
+inp	test.py	/^inp = open("input.txt")$/;"	v
+input_	5/soln.py	/^def input_(pos):$/;"	f
+input_	5/soln2.py	/^def input_(pos):$/;"	f
+input_	7/soln.py	/^def input_(pos, val, nums):$/;"	f
+input_	9/soln.py	/^def input_(pos):$/;"	f
+input_	broken_vim.py	/^def input_(pos):$/;"	f
+input_	not_broken.py	/^def input_(pos):$/;"	f
+input_	test.py	/^def input_(pos):$/;"	f
+instr	2/soln.py	/^            instr = nums[i]$/;"	v
+instr	2/soln.py	/^    instr = nums[i]$/;"	v
+instr	5/soln.py	/^    instr = nums[i]$/;"	v
+instr	5/soln.py	/^    instr, modes = split_instr(instr)$/;"	v
+instr	5/soln2.py	/^    instr = nums[i]$/;"	v
+instr	5/soln2.py	/^    instr, modes = split_instr(instr)$/;"	v
+instr	9/soln.py	/^    instr = nums[i]$/;"	v
+instr	9/soln.py	/^    instr, modes = split_instr(instr)$/;"	v
+instr	broken_vim.py	/^    instr = nums[i]$/;"	v
+instr	broken_vim.py	/^    instr, modes = split_instr(instr)$/;"	v
+instr	not_broken.py	/^    instr = nums[i]$/;"	v
+instr	not_broken.py	/^    instr, modes = split_instr(instr)$/;"	v
+instr	test.py	/^    instr = nums[i]$/;"	v
+instr	test.py	/^    instr, modes = split_instr(instr)$/;"	v
+instr	test_base.py	/^    instr = nums[i]$/;"	v
+instr	test_base.py	/^    instr, modes = split_instr(instr)$/;"	v
+instruction_lengths	5/soln.py	/^instruction_lengths = {$/;"	v
+instruction_lengths	5/soln2.py	/^instruction_lengths = {$/;"	v
+instruction_lengths	7/soln.py	/^instruction_lengths = {$/;"	v
+instruction_lengths	9/soln.py	/^instruction_lengths = {$/;"	v
+instruction_lengths	broken_vim.py	/^instruction_lengths = {$/;"	v
+instruction_lengths	not_broken.py	/^instruction_lengths = {$/;"	v
+instruction_lengths	test.py	/^instruction_lengths = {$/;"	v
+instructions	5/soln.py	/^instructions = {$/;"	v
+instructions	5/soln2.py	/^instructions = {$/;"	v
+instructions	7/soln.py	/^instructions = {$/;"	v
+instructions	9/soln.py	/^instructions = {$/;"	v
+instructions	broken_vim.py	/^instructions = {$/;"	v
+instructions	not_broken.py	/^instructions = {$/;"	v
+instructions	test.py	/^instructions = {$/;"	v
+intx	3/soln.py	/^intx, inty = np.where(grid == 3)$/;"	v
+inty	3/soln.py	/^intx, inty = np.where(grid == 3)$/;"	v
+io	7/soln.py	/^    io = deque()$/;"	v
+jk	.vimrc	/^inoremap jk <Esc>$/;"	m
+jump	5/soln2.py	/^def jump(yes, value):$/;"	f
+jump_false	5/soln.py	/^def jump_false(true, value):$/;"	f
+jump_false	7/soln.py	/^def jump_false(true, value, nums):$/;"	f
+jump_false	9/soln.py	/^def jump_false(true, value):$/;"	f
+jump_false	broken_vim.py	/^def jump_false(true, value):$/;"	f
+jump_false	not_broken.py	/^def jump_false(true, value):$/;"	f
+jump_false	test.py	/^def jump_false(true, value):$/;"	f
+jump_true	5/soln.py	/^def jump_true(true, value):$/;"	f
+jump_true	7/soln.py	/^def jump_true(true, value, nums):$/;"	f
+jump_true	9/soln.py	/^def jump_true(true, value):$/;"	f
+jump_true	broken_vim.py	/^def jump_true(true, value):$/;"	f
+jump_true	not_broken.py	/^def jump_true(true, value):$/;"	f
+jump_true	test.py	/^def jump_true(true, value):$/;"	f
+l	5/soln.py	/^    l = instruction_lengths[instr]$/;"	v
+l	5/soln2.py	/^    l = instruction_lengths[instr]$/;"	v
+l	8/soln.py	/^l = zeros.index(min(zeros))$/;"	v
+l	9/soln.py	/^    l = instruction_lengths[instr]$/;"	v
+l	broken_vim.py	/^    l = instruction_lengths[instr]$/;"	v
+l	not_broken.py	/^    l = instruction_lengths[instr]$/;"	v
+l	test.py	/^    l = instruction_lengths[instr]$/;"	v
+l	test_base.py	/^    l = instruction_lengths[instr]$/;"	v
+layer	8/soln.py	/^    layer = image[i, :, :]$/;"	v
+layer	8/soln.py	/^layer = image[l, :, :]$/;"	v
+layers	8/soln.py	/^layers = len(digits) \/\/ (width * height)$/;"	v
+line	10/soln.py	/^    line = lambda x: slope * x + b$/;"	f	function:get_line	file:
+line	8/soln.py	/^line = lines[0].strip("\\n")$/;"	v
+lines	10/soln.py	/^lines = [line.strip("\\n") for line in lines]$/;"	v
+lines	10/soln.py	/^lines = inp.readlines()$/;"	v
+lines	6/soln.py	/^lines = inp.readlines()$/;"	v
+lines	8/soln.py	/^lines = inp.readlines()$/;"	v
+lt	5/soln.py	/^def lt(a, b, pos):$/;"	f
+lt	7/soln.py	/^def lt(a, b, pos, nums):$/;"	f
+lt	9/soln.py	/^def lt(a, b, pos):$/;"	f
+lt	broken_vim.py	/^def lt(a, b, pos):$/;"	f
+lt	not_broken.py	/^def lt(a, b, pos):$/;"	f
+lt	test.py	/^def lt(a, b, pos):$/;"	f
+main	3/main.go	/^func main() {$/;"	f	package:main
+main	3/main.go	/^package main$/;"	p
+main	4/main.go	/^func main() {$/;"	f	package:main
+main	4/main.go	/^package main$/;"	p
+mapleader	.vimrc	/^let mapleader = "\\<space>"$/;"	v
+maplocalleader	.vimrc	/^let maplocalleader = "\\\\"$/;"	v
+memories	7/soln.py	/^    memories = [$/;"	v
+midpoint	3/soln.py	/^midpoint = gridsize \/\/ 2$/;"	v
+modes	5/soln.py	/^    instr, modes = split_instr(instr)$/;"	v
+modes	5/soln2.py	/^    instr, modes = split_instr(instr)$/;"	v
+modes	9/soln.py	/^    instr, modes = split_instr(instr)$/;"	v
+modes	broken_vim.py	/^    instr, modes = split_instr(instr)$/;"	v
+modes	not_broken.py	/^    instr, modes = split_instr(instr)$/;"	v
+modes	test.py	/^    instr, modes = split_instr(instr)$/;"	v
+modes	test_base.py	/^    instr, modes = split_instr(instr)$/;"	v
+mult	5/soln.py	/^def mult(x, y, pos):$/;"	f
+mult	5/soln2.py	/^def mult(x, y, pos):$/;"	f
+mult	7/soln.py	/^def mult(x, y, pos, nums):$/;"	f
+mult	9/soln.py	/^def mult(x, y, pos):$/;"	f
+mult	broken_vim.py	/^def mult(x, y, pos):$/;"	f
+mult	not_broken.py	/^def mult(x, y, pos):$/;"	f
+mult	test.py	/^def mult(x, y, pos):$/;"	f
+np	3/soln.py	/^import numpy as np$/;"	I
+np	4/soln.py	/^import numpy as np$/;"	I
+np	8/soln.py	/^import numpy as np$/;"	I
+num	4/soln.py	/^    num = str(num)$/;"	v
+num1	2/soln.py	/^            num1 = nums[nums[i + 1]]$/;"	v
+num1	2/soln.py	/^    num1 = nums[nums[i + 1]]$/;"	v
+num1	4/soln.py	/^num1 = 245318$/;"	v
+num2	2/soln.py	/^            num2 = nums[nums[i + 2]]$/;"	v
+num2	2/soln.py	/^    num2 = nums[nums[i + 2]]$/;"	v
+num2	4/soln.py	/^num2 = 765747$/;"	v
+numbertoggle	.vimrc	/^augroup numbertoggle$/;"	a
+nums	1/soln.py	/^nums = [int(s.strip("\\n")) for s in nums_str]$/;"	v
+nums	2/soln.py	/^        nums = copy.deepcopy(start_nums)$/;"	v
+nums	2/soln.py	/^nums = [int(s) for s in nums_str.split(",")]$/;"	v
+nums	5/soln.py	/^nums = [int(s) for s in nums_str.split(",")]$/;"	v
+nums	5/soln2.py	/^nums = [int(s) for s in nums_str.split(",")]$/;"	v
+nums	7/soln.py	/^nums = [int(s) for s in nums_str.split(",")]$/;"	v
+nums	9/soln.py	/^nums = [int(s) for s in nums_str.split(",")]$/;"	v
+nums	broken_vim.py	/^nums = [int(s) for s in nums_str.split(",")]$/;"	v
+nums	test.py	/^nums = [int(s) for s in nums_str.split(",")]$/;"	v
+nums_str	1/soln.py	/^nums_str = a.readlines()$/;"	v
+nums_str	2/soln.py	/^nums_str = a.readlines()[0].strip()$/;"	v
+nums_str	3/soln.py	/^nums_str = a.readlines()$/;"	v
+nums_str	5/soln.py	/^nums_str = inp.readlines()[0].strip('\\n')$/;"	v
+nums_str	5/soln2.py	/^nums_str = inp.readlines()[0].strip()$/;"	v
+nums_str	7/soln.py	/^nums_str = inp.readlines()[0].strip('\\n')$/;"	v
+nums_str	9/soln.py	/^nums_str = inp.readlines()[0].strip('\\n')$/;"	v
+nums_str	broken_vim.py	/^nums_str = inp.readlines()[0].strip('\\n')$/;"	v
+nums_str	test.py	/^nums_str = inp.readlines()[0].strip('\\n')$/;"	v
+ones	8/soln.py	/^ones = np.count_nonzero(layer==1)$/;"	v
+orbit_dicts	6/soln.py	/^orbit_dicts = {o: [] for o in all_orbits}$/;"	v
+orbits_list	6/soln.py	/^    orbits_list = orbit_dicts[o]$/;"	v
+output_	5/soln.py	/^def output_(x):$/;"	f
+output_	5/soln2.py	/^def output_(x):$/;"	f
+output_	7/soln.py	/^def output_(x, nums):$/;"	f
+output_	9/soln.py	/^def output_(x):$/;"	f
+output_	broken_vim.py	/^def output_(x):$/;"	f
+output_	not_broken.py	/^def output_(x):$/;"	f
+output_	test.py	/^def output_(x):$/;"	f
+params	5/soln.py	/^    params = nums[i+1:i+l+1]$/;"	v
+params	5/soln2.py	/^    params = nums[i+1:i+l+1]$/;"	v
+params	9/soln.py	/^    params = nums[i+1:i+l+1]$/;"	v
+params	broken_vim.py	/^    params = nums[i+1:i+l+1]$/;"	v
+params	not_broken.py	/^    params = nums[i+1:i+l+1]$/;"	v
+params	test.py	/^    params = nums[i+1:i+l+1]$/;"	v
+params	test_base.py	/^    params = nums[i+1:i+l+1]$/;"	v
+path1	3/soln.py	/^path1 = twopaths[0].split(",")$/;"	v
+path1dir	3/soln.py	/^path1dir = [s[0] for s in path1]$/;"	v
+path1distance	3/soln.py	/^path1distance = [int(s[1:]) for s in path1]$/;"	v
+path2	3/soln.py	/^path2 = twopaths[1].split(",")$/;"	v
+path2dir	3/soln.py	/^path2dir = [s[0] for s in path2]$/;"	v
+path2distance	3/soln.py	/^path2distance = [int(s[1:]) for s in path2]$/;"	v
+perms	7/soln.py	/^perms = permutations(range(5, 10))$/;"	v
+phases	7/soln.py	/^    phases = list(phases)$/;"	v
+phases_to_val	7/soln.py	/^phases_to_val = {}$/;"	v
+plt	8/soln.py	/^import matplotlib.pyplot as plt$/;"	I
+pointers	7/soln.py	/^    pointers = [0] * 5$/;"	v
+pos	8/soln.py	/^        pos = np.argmax(vec!=2)$/;"	v
+relative_base	9/soln.py	/^relative_base = 0$/;"	v
+rows	10/soln.py	/^rows = len(lines)$/;"	v
+run_intcode	7/soln.py	/^def run_intcode(nums, inputs, i):$/;"	f
+run_intcode	broken_vim.py	/^def run_intcode(nums):$/;"	f
+run_intcode	not_broken.py	/^def run_intcode(nums):$/;"	f
+run_intcode	test.py	/^def run_intcode(nums):$/;"	f
+sorted_angles	10/soln.py	/^sorted_angles = sorted(angles_asteroids.keys())$/;"	v
+split_instr	5/soln.py	/^def split_instr(instr):$/;"	f
+split_instr	5/soln2.py	/^def split_instr(instr):$/;"	f
+split_instr	7/soln.py	/^def split_instr(instr):$/;"	f
+split_instr	9/soln.py	/^def split_instr(instr):$/;"	f
+split_instr	broken_vim.py	/^def split_instr(instr):$/;"	f
+split_instr	not_broken.py	/^def split_instr(instr):$/;"	f
+split_instr	test.py	/^def split_instr(instr):$/;"	f
+split_instr	test_base.py	/^def split_instr(instr):$/;"	f
+start_nums	2/soln.py	/^start_nums = copy.deepcopy(nums)$/;"	v
+start_nums	5/soln.py	/^start_nums = copy.deepcopy(nums)$/;"	v
+start_nums	5/soln2.py	/^start_nums = copy.deepcopy(nums)$/;"	v
+start_nums	7/soln.py	/^start_nums = copy.deepcopy(nums)$/;"	v
+start_nums	9/soln.py	/^start_nums = copy.deepcopy(nums)$/;"	v
+start_nums	broken_vim.py	/^start_nums = copy.deepcopy(nums)$/;"	v
+start_nums	test.py	/^start_nums = copy.deepcopy(nums)$/;"	v
+subd	1/soln.py	/^subd = [num - 2 for num in divd]$/;"	v
+this_done	7/soln.py	/^            this_done, full_done = handle_pause(cur_iter, *run_intcode(memories[cur_iter], iter(/;"	v
+this_done	7/soln.py	/^        this_done, full_done = handle_pause(cur_iter, *init_intcode(memories[cur_iter], iter((ph/;"	v
+to	6/soln.py	/^    to, f = connection$/;"	v
+to	6/soln.py	/^    to, f = line.strip("\\n").split(")")$/;"	v
+to_from	6/soln.py	/^to_from = []$/;"	v
+traveledG1	3/soln.py	/^    traveledG1 = distgrid1[x, y]$/;"	v
+traveledG2	3/soln.py	/^    traveledG2 = distgrid2[x, y]$/;"	v
+tup_compare	10/soln.py	/^def tup_compare(a, b):$/;"	f
+twopaths	3/soln.py	/^twopaths = [s.strip("\\n") for s in nums_str]$/;"	v
+twos	8/soln.py	/^twos = np.count_nonzero(layer==2)$/;"	v
+updateGrid	3/main.go	/^func updateGrid(dir byte, dis int, grid *map[complex64]int, curPoint complex64) complex64 {$/;"	f	package:main	typeref:typename:complex64
+val	7/soln.py	/^    val = io.popleft()$/;"	v
+vec	8/soln.py	/^        vec = image[:, j, i]$/;"	v
+width	8/soln.py	/^width = 25$/;"	v
+x1	3/soln.py	/^    x1, x2, counter = draw2(direction, dis, x1, x2, 1, counter)$/;"	v
+x1	3/soln.py	/^    x1, x2, counter = draw2(direction, dis, x1, x2, 2, counter)$/;"	v
+x1	3/soln.py	/^x1 = midpoint$/;"	v
+x2	3/soln.py	/^    x1, x2, counter = draw2(direction, dis, x1, x2, 1, counter)$/;"	v
+x2	3/soln.py	/^    x1, x2, counter = draw2(direction, dis, x1, x2, 2, counter)$/;"	v
+x2	3/soln.py	/^x2 = midpoint $/;"	v
+x2	3/soln.py	/^x2 = midpoint$/;"	v
+zeros	8/soln.py	/^zeros = []$/;"	v
