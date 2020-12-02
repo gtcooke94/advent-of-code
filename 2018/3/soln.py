@@ -2,6 +2,7 @@ from aocd.models import Puzzle
 import inputs
 import sys
 from collections import defaultdict
+import personal_aoc_helpers as pah
 
 
 def soln_a(data):
@@ -13,6 +14,8 @@ def soln_a(data):
         for w in widths:
             for h in heights:
                 grid[(w, h)] += 1
+
+    pah.print_grid(grid)
     return sum(1 for i in grid.values() if i >= 2)
         
 
@@ -30,6 +33,7 @@ def soln_b(data):
                     grid[(w,h)] = "X"
                 else:
                     grid[(w,h)] = claim_id
+    pah.print_grid(grid)
     for claim_id, left_edge, top_edge, width, height in data:
         widths = range(left_edge, left_edge + width)
         heights = range(top_edge, top_edge + height)

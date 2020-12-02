@@ -1,27 +1,31 @@
 from aocd.models import Puzzle
 import inputs
 import sys
+import personal_aoc_helpers as pah
 from collections import Counter
 
 
 def soln_a(data):
-    pass
-    # return answer
+    parsed_data = parse(data)
+
+    return soln
 
 
 def soln_b(data):
-    pass
-    # return answer
+    parsed_data = parse(data)
+
+    return soln
 
 
 def parse(data):
-    pass
+    return data
     # return data or yield data
 
 
 def solve_puzzle(soln, a_or_b):
     puzzle = Puzzle(year=2020, day=1)
     answer = soln(puzzle.input_data)
+    print(answer)
     if a_or_b == "a":
         puzzle.answer_a = answer
     else:
