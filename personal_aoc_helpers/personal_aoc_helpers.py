@@ -1,5 +1,6 @@
 from collections.abc import MutableMapping
 
+
 def print_grid(dictionary, rows=None, cols=None, default_char="."):
     """Print conents of an mxn grid."""
     if rows is None:
@@ -16,7 +17,7 @@ def print_grid(dictionary, rows=None, cols=None, default_char="."):
         str_row = ""
         for entry in row:
             str_entry = str(entry).strip(" ")
-            str_row += (" " * (max_entry_length - len(str_entry)) + str_entry)
+            str_row += " " * (max_entry_length - len(str_entry)) + str_entry
         str_rows.append(str_row)
     str_grid = "\n".join(str_row for str_row in str_rows)
     print("==== Printing Grid ====\n")
@@ -33,7 +34,7 @@ class Grid(MutableMapping):
 
     def __getitem__(self, pos):
         return self.grid_dict.get(pos, None)
-    
+
     def __setitem__(self, pos, value):
         self.grid_dict[pos] = value
 
@@ -48,7 +49,7 @@ class Grid(MutableMapping):
             for col in range(self.num_cols):
                 yield row, col, self[row, col]
 
-    def __str__(self):
+    def __repr__(self):
         """Print conents of an mxn grid."""
         grid = [[self.default_char] * self.num_cols for _ in range(self.num_rows)]
         max_entry_length = max(len(str(entry)) for entry in self.grid_dict.values()) + 1
@@ -59,7 +60,7 @@ class Grid(MutableMapping):
             str_row = ""
             for entry in row:
                 str_entry = str(entry).strip(" ")
-                str_row += (" " * (max_entry_length - len(str_entry)) + str_entry)
+                str_row += " " * (max_entry_length - len(str_entry)) + str_entry
             str_rows.append(str_row)
         str_grid = "\n".join(str_row for str_row in str_rows)
         return str_grid
@@ -98,6 +99,7 @@ class Grid(MutableMapping):
                 grid[(row, col)] = character
         return cls(grid, num_rows, num_cols)
 
+
 LR_GRID_MOVEMENTS = [
     (0, 1),
     (1, 0),
@@ -115,4 +117,3 @@ LR_AND_DIAG_MOVEMENTS = [
     (-1, 1),
     (1, -1),
 ]
-
