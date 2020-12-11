@@ -32,7 +32,7 @@ class Grid(MutableMapping):
         self.default_char = default_char
 
     def __getitem__(self, pos):
-        return self.grid_dict[pos]
+        return self.grid_dict.get(pos, None)
     
     def __setitem__(self, pos, value):
         self.grid_dict[pos] = value
@@ -95,3 +95,22 @@ class Grid(MutableMapping):
             for col, character in enumerate(line):
                 grid[(row, col)] = character
         return cls(grid, num_rows, num_cols)
+
+LR_GRID_MOVEMENTS = [
+    (0, 1),
+    (1, 0),
+    (0, -1),
+    (-1, 0),
+]
+
+LR_AND_DIAG_MOVEMENTS = [
+    (0, 1),
+    (1, 0),
+    (1, 1),
+    (0, -1),
+    (-1, 0),
+    (-1, -1),
+    (-1, 1),
+    (1, -1),
+]
+

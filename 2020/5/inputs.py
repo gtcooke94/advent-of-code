@@ -1,0 +1,5 @@
+inp0 = """BFFFBBFRRR
+FFFBBBFRRR
+BBFFBBFRLL
+"""
+inputs = [inp0]
