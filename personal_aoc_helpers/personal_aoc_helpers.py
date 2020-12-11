@@ -44,7 +44,9 @@ class Grid(MutableMapping):
         return len(self.grid_dict)
 
     def __iter__(self):
-        return iter(self.grid_dict)
+        for row in range(self.num_rows):
+            for col in range(self.num_cols):
+                yield row, col, self[row, col]
 
     def __str__(self):
         """Print conents of an mxn grid."""

@@ -7,16 +7,7 @@ from collections import deque
 from copy import deepcopy
 
 
-movements = [
-    (0, 1),
-    (1, 0),
-    (1, 1),
-    (0, -1),
-    (-1, 0),
-    (-1, -1),
-    (-1, 1),
-    (1, -1),
-]
+movements = pah.LR_AND_DIAG_MOVEMENTS
 
 
 def soln_a(data):
@@ -28,42 +19,34 @@ def soln_a(data):
     """
     grid = parse(data)
     new_grid = deepcopy(grid)
-    grids_different = True
-
-    while grids_different:
-        for row in range(grid.num_rows):
-            for col in range(grid.num_cols):
-                if grid[row, col] == "L":
-                    any_occupied = False
-                    for drow, dcol in movements:
-                        arow = row + drow
-                        acol = col + dcol
-                        if grid[arow, acol] == "#":
-                            any_occupied = True
-                            break
-                    if not any_occupied:
-                        new_grid[row, col] = "#"
-                elif grid[row, col] == "#":
-                    occupied = 0
-                    for drow, dcol in movements:
-                        arow = row + drow
-                        acol = col + dcol
-                        if grid[arow, acol] == "#":
-                            occupied += 1
-                        if occupied == 4:
-                            new_grid[row, col] = "L"
-                            break
+    while True:
+        for row, col, value in grid:
+            if value == "L":
+                any_occupied = False
+                for drow, dcol in movements:
+                    arow = row + drow
+                    acol = col + dcol
+                    if grid[arow, acol] == "#":
+                        any_occupied = True
+                        break
+                if not any_occupied:
+                    new_grid[row, col] = "#"
+            elif value == "#":
+                occupied = 0
+                for drow, dcol in movements:
+                    arow = row + drow
+                    acol = col + dcol
+                    if grid[arow, acol] == "#":
+                        occupied += 1
+                    if occupied == 4:
+                        new_grid[row, col] = "L"
+                        break
         if grid == new_grid:
             break
 
         grid = new_grid
         new_grid = deepcopy(grid)
-    occupied = 0
-    for row in range(grid.num_rows):
-        for col in range(grid.num_cols):
-            if grid[row, col] == "#":
-                occupied += 1
-    return occupied
+    return sum(value == "#" for _, _, value in grid)
 
 
 def soln_b(data):
@@ -77,49 +60,44 @@ def soln_b(data):
     grids_different = True
 
     while grids_different:
-        for row in range(grid.num_rows):
-            for col in range(grid.num_cols):
-                if grid[row, col] == "L":
-                    any_occupied = False
-                    for drow, dcol in movements:
-                        if any_occupied:
-                            break
-                        arow = row + drow
-                        acol = col + dcol
-                        while grid[arow, acol] not in set(["#", "L", None]):
-                            arow += drow
-                            acol += dcol
-                        if grid[arow, acol] == "#":
-                            any_occupied = True
-                            break
-                    if not any_occupied:
-                        new_grid[row, col] = "#"
-                elif grid[row, col] == "#":
-                    occupied = 0
-                    for drow, dcol in movements:
-                        if occupied == 5:
-                            break
-                        arow = row + drow
-                        acol = col + dcol
-                        while grid[arow, acol] not in set(["#", "L", None]):
-                            arow += drow
-                            acol += dcol
-                        if grid[arow, acol] == "#":
-                            occupied += 1
-                        if occupied == 5:
-                            new_grid[row, col] = "L"
-                            break
+        for row, col, value in grid:
+            if value == "L":
+                any_occupied = False
+                for drow, dcol in movements:
+                    if any_occupied:
+                        break
+                    arow = row + drow
+                    acol = col + dcol
+                    while grid[arow, acol] not in set(["#", "L", None]):
+                        arow += drow
+                        acol += dcol
+                    if grid[arow, acol] == "#":
+                        any_occupied = True
+                        break
+                if not any_occupied:
+                    new_grid[row, col] = "#"
+            elif value == "#":
+                occupied = 0
+                for drow, dcol in movements:
+                    if occupied == 5:
+                        break
+                    arow = row + drow
+                    acol = col + dcol
+                    while grid[arow, acol] not in set(["#", "L", None]):
+                        arow += drow
+                        acol += dcol
+                    if grid[arow, acol] == "#":
+                        occupied += 1
+                    if occupied == 5:
+                        new_grid[row, col] = "L"
+                        break
         if grid == new_grid:
             break
 
         grid = new_grid
         new_grid = deepcopy(grid)
-    occupied = 0
-    for row in range(grid.num_rows):
-        for col in range(grid.num_cols):
-            if grid[row, col] == "#":
-                occupied += 1
-    return occupied
+
+    return sum(value == "#" for _, _, value in grid)
 
 
 def parse(data):
