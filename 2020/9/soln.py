@@ -42,9 +42,8 @@ def soln_b(data):
     window_sum = parsed_data[i]
     while window_sum != bad_num:
         if window_sum > bad_num:
+            window_sum -= parsed_data[i]
             i += 1
-            j = i
-            window_sum = parsed_data[i]
         if window_sum < bad_num:
             j += 1
             window_sum += parsed_data[j]
