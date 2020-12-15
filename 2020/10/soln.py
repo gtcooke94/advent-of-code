@@ -18,6 +18,13 @@ def soln_a(data):
 
 
 def soln_b(data):
+    """
+    DP Solution, total_branches[i] = total branches if i was the end of the sequence
+    You just look at the previous valid adapters and add them together
+    [0, 1, 4, 5, 6, 7, 10, 11, 12, 15, 16, 19, 22] input becomes
+    [1, 1, 1, 1, 2, 4,  4,  4,  8,  8,  8,  8,  8] dp list
+    Answer is the last element of the dp list
+    """
     parsed_data = parse(data)
     sorted_chargers = sorted(parsed_data)
     sorted_chargers.append(sorted_chargers[-1] + 3)
