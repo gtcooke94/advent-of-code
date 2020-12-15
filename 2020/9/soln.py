@@ -14,8 +14,6 @@ def soln_a(data):
     queue.extend(parsed_data[:len_preamble])
     valid_set.update(parsed_data[:len_preamble])
     for num in parsed_data[len_preamble:]:
-        #  if num == 127:
-            #  import pdb; pdb.set_trace()
         works = False
         for a in valid_set:
             needed = num - a
@@ -30,7 +28,6 @@ def soln_a(data):
         valid_set.add(num)
         if not works:
             break
-            
 
     return num
 
@@ -48,13 +45,12 @@ def soln_b(data):
             j += 1
             window_sum += parsed_data[j]
 
-    return min(parsed_data[i:j+1]) + max(parsed_data[i:j+1])
+    return min(parsed_data[i : j + 1]) + max(parsed_data[i : j + 1])
 
 
 def parse(data):
     for line in data.split("\n"):
         yield int(line)
-    # return data or yield data
 
 
 def solve_puzzle(soln, a_or_b):
