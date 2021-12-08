@@ -1,0 +1,24 @@
+Follows:
+bbabbbbaabaabba
+babbbbaabbbbbabbbbbbaabaaabaaa
+aaabbbbbbaaaabaababaabababbabaaabbababababaaa
+bbbbbbbaaaabbbbaaabbabaaa
+bbbababbbbaaaaaaaabbababaaababaabab
+ababaaaaaabaaab
+ababaaaaabbbaba
+baabbaaaabbaaaababbaababb
+abbbbabbbbaaaababbbbbbaaaababb
+aaaaabbaabaaaaababaa
+aaaabbaabbaaaaaaabbbabbbaaabbaabaaa
+aabbbbbaabbbaaaaaabbbbbababaaaaabbaaabba
+
+
+Don't Follow
+abbbbbabbbaaaababbaabbbbabababbbabbbbbbabaaaa
+aaaabbaaaabbaaa
+babaaabbbaaabaababbaabababaaab
+
+I'm wrong on:
+babbbbaabbbbbabbbbbbaabaaabaaa
+bbbbbbbaaaabbbbaaabbabaaa
+bbbababbbbaaaaaaaabbababaaababaabab
