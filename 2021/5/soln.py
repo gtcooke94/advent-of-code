@@ -11,14 +11,16 @@ def soln_a(data):
     parsed_data = parse(data)
     grid = GridWithLines()
     for left, right in parsed_data:
-        grid.mark_line(left, right)
+        grid.mark_line_a(left, right)
     return grid.overlaps_count()
 
 
 def soln_b(data):
     parsed_data = parse(data)
-
-    return soln
+    grid = GridWithLines()
+    for left, right in parsed_data:
+        grid.mark_line_b(left, right)
+    return grid.overlaps_count()
 
 
 def parse(data):
